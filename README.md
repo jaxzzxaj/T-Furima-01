@@ -14,6 +14,10 @@
 | birthday           | integer  | null :false                  |
 
 # associationテーブル
+・has_many :products
+・has_one  :order
+・has_many :user_products
+
 
 # productテーブル
 | Column                     | Type       | Options             | default     |
@@ -25,19 +29,25 @@
 | name                       | string     | null :false         |             |
 | image                      | integer    | null :false         |             |
 | price                      | integer    | null :false         |             |
-| text                       | string     | null :false         |             |
+| text                       | string     | null :false         |             |コメント部分？
 | user                       | reference  | foreign-key :true   |             |
-# associationテーブル
 
-# commentテーブル
+# associationテーブル
+・belongs_to :user
+・has_one :user_product
+
+<!-- # commentテーブル
 | Column    | Type       | Options           |
 |:----------|:-----------|:------------------|
 | text      | string     | null :false       |
 | user      | reference  | foreign-key :true |
 | product   | reference  | foreign-key :true |
-# associationテーブル
 
-# buyerテーブル
+# associationテーブル
+・belongs_to :user
+・belongs_to :product -->
+
+# orderテーブル
 | Column                | Type       | Options      | default     |
 |:----------------------|:-----------|:-------------|:------------|
 | zip_code              | integer    | null :false  |             |
@@ -46,4 +56,16 @@
 | address               | string     | null :false  |             |
 | building_name         | string     |              |             |
 | phone                 | integer    | null :false  |             |
+
 # associationテーブル
+・belongs_to :user_product
+
+# user_productテーブル
+| Column    | Type       | Options           |
+|:----------|:-----------|:------------------|
+|product    | reference  | foreign_key :true |
+|user       | reference  | foreign_key :true |
+
+# associationテーブル
+・has_one :order
+・belongs_to :product

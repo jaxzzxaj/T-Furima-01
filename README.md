@@ -18,32 +18,32 @@
 # productテーブル
 | Column                     | Type       | Options                        |
 |:---------------------------|:-----------|:-------------------------------|
-| category_id                |
-| condition_id               |
-| charges_id                 |
-| estimated_shipping_date_id |
-| name                       |
-| image                      |
-| price                      |
-| text                       |
-| user                       |
+| category_id                | integer
+| condition_id               | integer
+| charges_id                 | integer
+| estimated_shipping_date_id | integer
+| name                       | string
+| image                      | integer
+| price                      | integer
+| text                       | string
+| user                       | reference
 # associationテーブル
 
 # commentテーブル
 | Column    | Type       | Options                        |
 |:----------|:-----------|:-------------------------------|
-| text      |
-| user      |
-| product   |
+| text      | string
+| user      | reference
+| product   | reference
 # associationテーブル
 
 # buyerテーブル
 | Column                | Type       | Options                        |
 |:----------------------|:-----------|:-------------------------------|
-| zip_code              |
-| prefecture_id         |
-| city                  |
-| address               |
-| building_name         |
-| phone                 |
+| zip_code              | integer
+| prefecture_id         | integer
+| city                  | string
+| address               | string
+| building_name         | string
+| phone                 | integer
 # associationテーブル

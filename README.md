@@ -16,17 +16,17 @@
 # associationテーブル
 
 # productテーブル
-| Column                     | Type       | Options             |
-|:---------------------------|:-----------|:--------------------|
-| category_id                | integer    | null :false         |
-| condition_id               | integer    | null :false         |
-| charges_id                 | integer    | null :false         |
-| estimated_shipping_date_id | integer    | null :false         |
-| name                       | string     | null :false         |
-| image                      | integer    | null :false         |
-| price                      | integer    | null :false         |
-| text                       | string     | null :false         |
-| user                       | reference  | foreign-key :true   |
+| Column                     | Type       | Options             | default     |
+|:---------------------------|:-----------|:--------------------|:------------|
+| category_id                | integer    | null :false         | active_hash |
+| condition_id               | integer    | null :false         | active_hash |
+| charges_id                 | integer    | null :false         | active_hash |
+| estimated_shipping_date_id | integer    | null :false         | active_hash |
+| name                       | string     | null :false         |             |
+| image                      | integer    | null :false         |             |
+| price                      | integer    | null :false         |             |
+| text                       | string     | null :false         |             |
+| user                       | reference  | foreign-key :true   |             |
 # associationテーブル
 
 # commentテーブル
@@ -38,12 +38,12 @@
 # associationテーブル
 
 # buyerテーブル
-| Column                | Type       | Options      |
-|:----------------------|:-----------|:-------------|
-| zip_code              | integer    | null :false  |
-| prefecture_id         | integer    | null :false  |
-| city                  | string     | null :false  |
-| address               | string     | null :false  |
-| building_name         | string     |              |
-| phone                 | integer    | null :false  |
+| Column                | Type       | Options      | default     |
+|:----------------------|:-----------|:-------------|:------------|
+| zip_code              | integer    | null :false  |             |
+| prefecture_id         | integer    | null :false  | active_hash |
+| city                  | string     | null :false  |             |
+| address               | string     | null :false  |             |
+| building_name         | string     |              |             |
+| phone                 | integer    | null :false  |             |
 # associationテーブル

@@ -1,24 +1,49 @@
-# README
+# テーブルの設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# userテーブル
+| Column             | Type       | Options                        |
+|:-------------------|:-----------|:-------------------------------|
+| nickname           |
+| mail               |
+| password           |
+| encrypted_password |
+| name               |
+| ruby_name          |
+| family_name        |
+| ruby_family_name   |
+| birthday           |
 
-Things you may want to cover:
+# associationテーブル
 
-* Ruby version
+# productテーブル
+| Column                  | Type       | Options                        |
+|:------------------------|:-----------|:-------------------------------|
+| category                |
+| condition               |
+| shipping                |
+| estimated_shipping_date |
+| name                    |
+| image                   |
+| price                   |
+| text                    |
+| user                    |
+# associationテーブル
 
-* System dependencies
+# commentテーブル
+| Column    | Type       | Options                        |
+|:----------|:-----------|:-------------------------------|
+| text      |
+| user      |
+| product   |
+# associationテーブル
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# buyerテーブル
+| Column             | Type       | Options                        |
+|:-------------------|:-----------|:-------------------------------|
+| zip_code           |
+| prefecture         |
+| city               |
+| address            |
+| building_name      |
+| phone              |
+# associationテーブル

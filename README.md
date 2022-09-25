@@ -1,49 +1,49 @@
 # テーブルの設計
 
 # userテーブル
-| Column             | Type       | Options                        |
-|:-------------------|:-----------|:-------------------------------|
-| nickname           | string
-| mail               | string
-| password           | integer
-| encrypted_password | integer
-| name               | string
-| ruby_name          | string
-| family_name        | string
-| ruby_family_name   | string
-| birthday           | integer
+| Column             | Type     | Options                      |
+|:-------------------|:---------|:-----------------------------|
+| nickname           | string   | null :false                  |
+| mail               | string   | unique :true,  null :false   |
+| password           | integer  | null :false                  |
+| encrypted_password | integer  | null :false                  |
+| name               | string   | null :false                  |
+| ruby_name          | string   | null :false                  |
+| family_name        | string   | null :false                  |
+| ruby_family_name   | string   | null :false                  |
+| birthday           | integer  | null :false                  |
 
 # associationテーブル
 
 # productテーブル
-| Column                     | Type       | Options                        |
-|:---------------------------|:-----------|:-------------------------------|
-| category_id                | integer
-| condition_id               | integer
-| charges_id                 | integer
-| estimated_shipping_date_id | integer
-| name                       | string
-| image                      | integer
-| price                      | integer
-| text                       | string
-| user                       | reference
+| Column                     | Type       | Options             |
+|:---------------------------|:-----------|:--------------------|
+| category_id                | integer    | null :false         |
+| condition_id               | integer    | null :false         |
+| charges_id                 | integer    | null :false         |
+| estimated_shipping_date_id | integer    | null :false         |
+| name                       | string     | null :false         |
+| image                      | integer    | null :false         |
+| price                      | integer    | null :false         |
+| text                       | string     | null :false         |
+| user                       | reference  | foreign-key :true   |
 # associationテーブル
 
 # commentテーブル
-| Column    | Type       | Options                        |
-|:----------|:-----------|:-------------------------------|
-| text      | string
-| user      | reference
-| product   | reference
+| Column    | Type       | Options           |
+|:----------|:-----------|:------------------|
+| text      | string     | null :false       |
+| user      | reference  | foreign-key :true |
+| product   | reference  | foreign-key :true |
 # associationテーブル
 
 # buyerテーブル
-| Column                | Type       | Options                        |
-|:----------------------|:-----------|:-------------------------------|
-| zip_code              | integer
-| prefecture_id         | integer
-| city                  | string
-| address               | string
-| building_name         | string
-| phone                 | integer
+| Column                | Type       | Options      |
+|:----------------------|:-----------|:-------------|
+| zip_code              | integer    | null :false  |
+| prefecture_id         | integer    | null :false  |
+| city                  | string     | null :false  |
+| address               | string     | null :false  |
+| building_name         | string     |              |
+| phone                 | integer    | null :false  |
 # associationテーブル

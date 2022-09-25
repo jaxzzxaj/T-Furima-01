@@ -16,17 +16,17 @@
 # associationテーブル
 
 # productテーブル
-| Column                  | Type       | Options                        |
-|:------------------------|:-----------|:-------------------------------|
-| category                |
-| condition               |
-| shipping                |
-| estimated_shipping_date |
-| name                    |
-| image                   |
-| price                   |
-| text                    |
-| user                    |
+| Column                     | Type       | Options                        |
+|:---------------------------|:-----------|:-------------------------------|
+| category_id                |
+| condition_id               |
+| charges_id                 |
+| estimated_shipping_date_id |
+| name                       |
+| image                      |
+| price                      |
+| text                       |
+| user                       |
 # associationテーブル
 
 # commentテーブル
@@ -38,12 +38,12 @@
 # associationテーブル
 
 # buyerテーブル
-| Column             | Type       | Options                        |
-|:-------------------|:-----------|:-------------------------------|
-| zip_code           |
-| prefecture         |
-| city               |
-| address            |
-| building_name      |
-| phone              |
+| Column                | Type       | Options                        |
+|:----------------------|:-----------|:-------------------------------|
+| zip_code              |
+| prefecture_id         |
+| city                  |
+| address               |
+| building_name         |
+| phone                 |
 # associationテーブル

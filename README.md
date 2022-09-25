@@ -3,15 +3,15 @@
 # userテーブル
 | Column             | Type       | Options                        |
 |:-------------------|:-----------|:-------------------------------|
-| nickname           |
-| mail               |
-| password           |
-| encrypted_password |
-| name               |
-| ruby_name          |
-| family_name        |
-| ruby_family_name   |
-| birthday           |
+| nickname           | string
+| mail               | string
+| password           | integer
+| encrypted_password | integer
+| name               | string
+| ruby_name          | string
+| family_name        | string
+| ruby_family_name   | string
+| birthday           | integer
 
 # associationテーブル
 
